@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "nodes": [
+      {"id": "input_node", "type": "Input", "label": "Patient Medical Data", "nodeCategory": "input"},
+      {"id": "diagnosis_coordinator", "type": "Agent", "label": "Diagnosis Coordinator (Manager)", "nodeCategory": "agent"},
+      {"id": "medical_analysis_agent", "type": "Agent", "label": "Medical Analysis Agent", "nodeCategory": "agent"},
+      {"id": "dietary_recommendation_agent", "type": "Agent", "label": "Dietary Recommendation Agent", "nodeCategory": "agent"},
+      {"id": "fitness_advisory_agent", "type": "Agent", "label": "Fitness Advisory Agent", "nodeCategory": "agent"},
+      {"id": "hospital_alert_agent", "type": "Agent", "label": "Hospital Alert Agent", "nodeCategory": "agent"},
+      {"id": "output_node", "type": "Output", "label": "Diagnosis Output", "nodeCategory": "end"}
+    ],
+    "edges": [
+      {"source": "input_node", "target": "diagnosis_coordinator"},
+      {"source": "diagnosis_coordinator", "target": "medical_analysis_agent"},
+      {"source": "diagnosis_coordinator", "target": "dietary_recommendation_agent"},
+      {"source": "diagnosis_coordinator", "target": "fitness_advisory_agent"},
+      {"source": "diagnosis_coordinator", "target": "hospital_alert_agent"},
+      {"source": "hospital_alert_agent", "target": "output_node"}
+    ]
+  },
+  "agents": {
+    "diagnosis_coordinator": {
+      "agent_id": "69996662e3502b03b1c6e039",
+      "name": "Diagnosis Coordinator",
+      "type": "manager",
+      "file_output": true,
+      "managed_agents": ["6999664072a2e3b0eaab986e", "69996641730bbd74d53e8bb4", "6999664182d9195c9e524b43"]
+    },
+    "medical_analysis_agent": {
+      "agent_id": "6999664072a2e3b0eaab986e",
+      "name": "Medical Analysis Agent",
+      "type": "sub-agent"
+    },
+    "dietary_recommendation_agent": {
+      "agent_id": "69996641730bbd74d53e8bb4",
+      "name": "Dietary Recommendation Agent",
+      "type": "sub-agent"
+    },
+    "fitness_advisory_agent": {
+      "agent_id": "6999664182d9195c9e524b43",
+      "name": "Fitness Advisory Agent",
+      "type": "sub-agent"
+    },
+    "hospital_alert_agent": {
+      "agent_id": "699966628cfc4d116987bcde",
+      "name": "Hospital Alert Agent",
+      "type": "independent"
+    }
+  }
+}

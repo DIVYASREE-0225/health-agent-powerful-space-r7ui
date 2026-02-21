@@ -1,0 +1,29 @@
+{
+  "agent_name": "Hospital Alert Agent",
+  "agent_id": "699966628cfc4d116987bcde",
+  "description": "Sends automated emergency alerts to nearby hospitals when critical/emergency conditions are detected, including patient summary and urgency level",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "alert_status": "string",
+    "urgency_level": "string",
+    "patient_summary": "string",
+    "condition_detected": "string",
+    "recommended_actions": ["string"],
+    "hospitals_to_notify": [{"name": "string", "distance": "string", "specialty": "string", "contact": "string"}],
+    "alert_message": "string"
+  },
+  "example_response": {
+    "alert_status": "Sent",
+    "urgency_level": "Critical",
+    "patient_summary": "45-year-old male with acute chest pain and elevated troponin levels indicating possible myocardial infarction",
+    "condition_detected": "Acute Myocardial Infarction (Heart Attack)",
+    "recommended_actions": ["Immediate ECG monitoring", "Administer aspirin 325mg", "Prepare for cardiac catheterization", "Contact cardiologist on-call"],
+    "hospitals_to_notify": [
+      {"name": "City General Hospital", "distance": "2.5 km", "specialty": "Cardiology & Emergency Medicine", "contact": "+1-555-0100"},
+      {"name": "St. Mary's Medical Center", "distance": "4.1 km", "specialty": "Cardiac Surgery", "contact": "+1-555-0200"}
+    ],
+    "alert_message": "EMERGENCY ALERT: Patient presenting with acute myocardial infarction symptoms. Immediate cardiac intervention required. ETA to nearest facility: 8 minutes."
+  }
+}

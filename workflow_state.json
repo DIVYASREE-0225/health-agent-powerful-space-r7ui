@@ -1,0 +1,61 @@
+{
+  "agents": {
+    "diagnosis_coordinator": {
+      "agent_id": "69996662e3502b03b1c6e039",
+      "name": "Diagnosis Coordinator",
+      "type": "manager",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "file_output": true,
+      "managed_agents": [
+        "6999664072a2e3b0eaab986e",
+        "69996641730bbd74d53e8bb4",
+        "6999664182d9195c9e524b43"
+      ]
+    },
+    "medical_analysis_agent": {
+      "agent_id": "6999664072a2e3b0eaab986e",
+      "name": "Medical Analysis Agent",
+      "type": "sub-agent",
+      "provider": "google",
+      "model": "gemini-2.5-pro",
+      "temperature": 0.2,
+      "top_p": 1,
+      "file_output": false
+    },
+    "dietary_recommendation_agent": {
+      "agent_id": "69996641730bbd74d53e8bb4",
+      "name": "Dietary Recommendation Agent",
+      "type": "sub-agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "file_output": false
+    },
+    "fitness_advisory_agent": {
+      "agent_id": "6999664182d9195c9e524b43",
+      "name": "Fitness Advisory Agent",
+      "type": "sub-agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "file_output": false
+    },
+    "hospital_alert_agent": {
+      "agent_id": "699966628cfc4d116987bcde",
+      "name": "Hospital Alert Agent",
+      "type": "independent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "file_output": false
+    }
+  },
+  "workflow_pattern": "hybrid_manager_subagent_with_independent",
+  "created_at": "2026-02-21"
+}

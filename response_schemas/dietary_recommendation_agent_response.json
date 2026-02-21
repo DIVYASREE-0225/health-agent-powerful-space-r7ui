@@ -1,0 +1,26 @@
+{
+  "agent_name": "Dietary Recommendation Agent",
+  "agent_id": "69996641730bbd74d53e8bb4",
+  "description": "Generates personalized dietary recommendations including foods to eat, foods to avoid, meal timing, and nutritional guidance based on diagnosed conditions",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "foods_to_eat": ["string"],
+    "foods_to_avoid": ["string"],
+    "meal_plan": [{"meal": "string", "description": "string", "time": "string"}],
+    "nutritional_notes": "string",
+    "hydration_advice": "string"
+  },
+  "example_response": {
+    "foods_to_eat": ["Leafy greens (spinach, kale)", "Whole grains (brown rice, oats)", "Lean proteins (chicken, fish)", "Legumes (lentils, chickpeas)"],
+    "foods_to_avoid": ["Refined sugars and sweets", "White bread and pasta", "Sugary beverages", "Fried foods"],
+    "meal_plan": [
+      {"meal": "Breakfast", "description": "Oatmeal with berries and nuts", "time": "7:00 AM"},
+      {"meal": "Lunch", "description": "Grilled chicken salad with quinoa", "time": "12:30 PM"},
+      {"meal": "Dinner", "description": "Baked salmon with steamed vegetables", "time": "7:00 PM"}
+    ],
+    "nutritional_notes": "Focus on low-glycemic index foods. Aim for 25-30g of fiber daily.",
+    "hydration_advice": "Drink 8-10 glasses of water daily. Avoid sugary drinks and fruit juices."
+  }
+}

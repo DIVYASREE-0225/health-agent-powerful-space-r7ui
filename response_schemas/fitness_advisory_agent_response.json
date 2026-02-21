@@ -1,0 +1,28 @@
+{
+  "agent_name": "Fitness Advisory Agent",
+  "agent_id": "6999664182d9195c9e524b43",
+  "description": "Creates personalized physical activity plans, exercise routines, lifestyle modification tips, and follow-up care timelines tailored to the patient's diagnosis",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "exercise_routines": [{"name": "string", "description": "string", "difficulty": "string", "frequency": "string", "duration": "string"}],
+    "lifestyle_tips": ["string"],
+    "activity_level": "string",
+    "follow_up_timeline": [{"date": "string", "action": "string", "type": "string"}],
+    "precautions": ["string"]
+  },
+  "example_response": {
+    "exercise_routines": [
+      {"name": "Morning Walk", "description": "Brisk walking in the morning to improve cardiovascular health", "difficulty": "Easy", "frequency": "Daily", "duration": "30 minutes"},
+      {"name": "Resistance Training", "description": "Light weight training to improve insulin sensitivity", "difficulty": "Moderate", "frequency": "3 times per week", "duration": "20 minutes"}
+    ],
+    "lifestyle_tips": ["Get 7-8 hours of sleep daily", "Reduce screen time before bed", "Practice stress management techniques"],
+    "activity_level": "Moderate",
+    "follow_up_timeline": [
+      {"date": "2 weeks", "action": "Blood sugar level check", "type": "Lab Test"},
+      {"date": "1 month", "action": "Follow-up with physician", "type": "Check-up"}
+    ],
+    "precautions": ["Monitor blood sugar before and after exercise", "Keep a glucose snack handy during workouts"]
+  }
+}

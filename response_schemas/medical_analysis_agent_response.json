@@ -1,0 +1,26 @@
+{
+  "agent_name": "Medical Analysis Agent",
+  "agent_id": "6999664072a2e3b0eaab986e",
+  "description": "Analyzes uploaded medical reports/images (X-ray, MRI, blood reports) to predict diseases and provides diagnosis explanation in simple, non-medical language",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "disease_prediction": "string",
+    "confidence_level": "number",
+    "severity": "string",
+    "diagnosis_explanation": "string",
+    "key_findings": ["string"],
+    "is_critical": "boolean",
+    "recommended_tests": ["string"]
+  },
+  "example_response": {
+    "disease_prediction": "Type 2 Diabetes Mellitus",
+    "confidence_level": 85,
+    "severity": "Moderate",
+    "diagnosis_explanation": "Your blood sugar levels are higher than normal, which suggests you may have Type 2 Diabetes. This means your body is not using insulin effectively.",
+    "key_findings": ["Fasting blood glucose: 180 mg/dL (normal: <100)", "HbA1c: 7.8% (normal: <5.7%)", "Elevated triglycerides: 250 mg/dL"],
+    "is_critical": false,
+    "recommended_tests": ["Oral Glucose Tolerance Test", "Kidney function panel", "Eye examination"]
+  }
+}

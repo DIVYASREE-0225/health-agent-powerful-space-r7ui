@@ -1,0 +1,53 @@
+{
+  "agent_name": "Diagnosis Coordinator",
+  "agent_id": "69996662e3502b03b1c6e039",
+  "description": "Coordinates the medical analysis, dietary, and fitness sub-agents; aggregates all outputs into a unified multilingual diagnosis result and generates comprehensive patient health report PDFs",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "file_output": true,
+  "response_schema": {
+    "diagnosis_summary": "string",
+    "disease_prediction": "string",
+    "confidence_level": "number",
+    "severity": "string",
+    "is_critical": "boolean",
+    "diagnosis_explanation": "string",
+    "key_findings": ["string"],
+    "recommended_tests": ["string"],
+    "foods_to_eat": ["string"],
+    "foods_to_avoid": ["string"],
+    "meal_plan": [{"meal": "string", "description": "string", "time": "string"}],
+    "nutritional_notes": "string",
+    "hydration_advice": "string",
+    "exercise_routines": [{"name": "string", "description": "string", "difficulty": "string", "frequency": "string", "duration": "string"}],
+    "lifestyle_tips": ["string"],
+    "activity_level": "string",
+    "follow_up_timeline": [{"date": "string", "action": "string", "type": "string"}],
+    "precautions": ["string"]
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [{"file_url": "https://example.com/file.pdf"}]
+  },
+  "example_response": {
+    "diagnosis_summary": "Comprehensive health assessment for Type 2 Diabetes Mellitus",
+    "disease_prediction": "Type 2 Diabetes Mellitus",
+    "confidence_level": 85,
+    "severity": "Moderate",
+    "is_critical": false,
+    "diagnosis_explanation": "Your blood sugar levels indicate Type 2 Diabetes. This is a manageable condition with proper diet, exercise, and medication.",
+    "key_findings": ["Elevated fasting blood glucose", "High HbA1c levels"],
+    "recommended_tests": ["Oral Glucose Tolerance Test", "Kidney function panel"],
+    "foods_to_eat": ["Leafy greens", "Whole grains", "Lean proteins"],
+    "foods_to_avoid": ["Refined sugars", "White bread", "Sugary beverages"],
+    "meal_plan": [{"meal": "Breakfast", "description": "Oatmeal with berries", "time": "7:00 AM"}],
+    "nutritional_notes": "Focus on low-glycemic index foods",
+    "hydration_advice": "Drink 8-10 glasses of water daily",
+    "exercise_routines": [{"name": "Morning Walk", "description": "Brisk walking", "difficulty": "Easy", "frequency": "Daily", "duration": "30 minutes"}],
+    "lifestyle_tips": ["Get 7-8 hours of sleep", "Manage stress levels"],
+    "activity_level": "Moderate",
+    "follow_up_timeline": [{"date": "2 weeks", "action": "Blood sugar check", "type": "Lab Test"}],
+    "precautions": ["Monitor blood sugar before exercise"]
+  }
+}
